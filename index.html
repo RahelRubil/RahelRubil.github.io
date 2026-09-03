@@ -1,184 +1,453 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K6HRJG7H');</script>
-<!-- End Google Tag Manager -->
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Growth Marketer Portfolio</title>
-  
-   <!-- Google Fonts -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K6HRJG7H');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Marketer Portfolio - Rahel Rubil</title>
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <style>
+        /* --------------------------------------------------
+           RESET & GLOBALA STILER
+        -------------------------------------------------- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-   <style>
-       * {
-           box-sizing: border-box;
-           margin: 0;
-           padding: 0;
-       }
+        /* Aktiverar mjuk scrollning i hela dokumentet */
+        html {
+            scroll-behavior: smooth;
+        }
 
+        body {
+            background-color: #18191b;
+            color: #e5e2da;
+            font-family: 'Italiana', 'Playfair Display', serif;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
 
-       body {
+        /* --------------------------------------------------
+           HEADER & NAVIGERING
+        -------------------------------------------------- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            z-index: 1000;
+            background-color: rgba(24, 25, 27, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(229, 226, 218, 0.05);
+        }
 
-           background-color: #18191b;
-           color: #e5e2da;
-           font-family: 'Italiana', 'Playfair Display', serif;
-           min-height: 100vh;
-           display: flex;
-           flex-direction: column;
-           justify-content: center; /* Centrerar huvudinnehållet vertikalt */
-           align-items: center;     /* Centrerar huvudinnehållet horisontellt */
-           position: relative;
-           overflow-x: hidden;
-       }
+        .logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            color: #e5e2da;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
 
+        .logo img {
+            height: 65px;
+            width: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid rgba(229, 226, 218, 0.2);
+        }
 
-       /* Header högst upp */
-       header {
-           position: absolute;
-           top: 0;
-           left: 0;
-           width: 100%;
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-           padding: 35px 50px;
-           z-index: 10;
-       }
+        /* Navigationsmeny */
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
 
+        nav a {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #e5e2da;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-       .logo {
-           font-family: 'Plus Jakarta Sans', sans-serif;
-           font-size: 0.85rem;
-           font-weight: 500;
-           letter-spacing: 1px;
-           line-height: 1.2;
-           text-transform: uppercase;
-           color: #e5e2da;
-       }
+        nav a:hover {
+            color: #ffffff;
+        }
 
+        /* --------------------------------------------------
+           SEKTIONSSTRUKTUR
+        -------------------------------------------------- */
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 140px 10% 80px 10%;
+            width: 100%;
+            position: relative;
+        }
 
-       .menu-btn {
-           display: flex;
-           flex-direction: column;
-           gap: 6px;
-           cursor: pointer;
-       }
+        /* Typografi för rubriker & text */
+        .hero-title {
+            font-size: clamp(3rem, 7.5vw, 7rem);
+            line-height: 0.95;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #e5e2da;
+            text-align: center;
+        }
 
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.05;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #e5e2da;
+            margin-bottom: 25px;
+            text-align: center;
+        }
 
-       .menu-btn span {
-           display: block;
-           width: 28px;
-           height: 1.5px;
-           background-color: #e5e2da;
-       }
+        .title-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            text-transform: lowercase;
+            font-weight: 400;
+            letter-spacing: 0px;
+        }
 
+        .body-text {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1rem;
+            color: #b3b0a8;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
 
-       /* Centrerat huvudinnehåll */
-       main {
-           text-align: center;
-           padding: 0 20px;
-           width: 100%;
-       }
+        /* --------------------------------------------------
+           SEKTION 1: OM MIG (2-kolumns layout)
+        -------------------------------------------------- */
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            max-width: 1100px;
+            width: 100%;
+            margin-top: 30px;
+        }
 
+        .about-image-box {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
 
-       .hero-title {
-           font-size: clamp(3rem, 7.5vw, 7rem);
-           line-height: 0.95;
-           letter-spacing: 2px;
-           text-transform: uppercase;
-           font-weight: 400;
-           color: #e5e2da;
-       }
+        .about-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e5e2da;
+            box-shadow: 0 0 30px rgba(229, 226, 218, 0.1);
+        }
 
+        .about-content {
+            flex: 1.5;
+            text-align: left;
+        }
 
-       .title-italic {
-           font-family: 'Playfair Display', serif;
-           font-style: italic;
-           text-transform: lowercase;
-           font-weight: 400;
-           letter-spacing: 0px;
-       }
+        /* --------------------------------------------------
+           SEKTION 2: KOMPETENSER (Grid med 4 kort)
+        -------------------------------------------------- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 40px;
+        }
 
+        .skill-card {
+            background-color: #212326;
+            border: 1px solid rgba(229, 226, 218, 0.08);
+            border-radius: 8px;
+            padding: 30px 25px;
+            text-align: left;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
 
-       /* Sidobadge i nedre högra hörnet */
-       .side-badge {
-           position: fixed;
-           right: 0;
-           bottom: 0;
-           background-color: #7fc8c5;
-           color: #18191b;
-           padding: 15px 10px;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           gap: 15px;
-           font-family: 'Plus Jakarta Sans', sans-serif;
-           border-top-left-radius: 4px;
-           z-index: 100;
-       }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #212326;
+        }
 
+        .skill-card h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #e5e2da;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
 
-       .side-badge .w-logo {
-           font-weight: 800;
-           font-size: 1.3rem;
-           line-height: 1;
-       }
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
 
+        .tag {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.75rem;
+            background-color: rgba(229, 226, 218, 0.08);
+            color: #e5e2da;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
 
-       .side-badge .badge-text {
-           writing-mode: vertical-rl;
-           transform: rotate(180deg);
-           font-size: 0.7rem;
-           font-weight: 600;
-           letter-spacing: 1px;
-           text-transform: uppercase;
-       }
-   </style>
+        /* --------------------------------------------------
+           SEKTION 3: KURSER & CASE (3 Projektkort)
+        -------------------------------------------------- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background-color: #212326;
+            border: 1px solid rgba(229, 226, 218, 0.08);
+            border-radius: 8px;
+            padding: 35px 30px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .project-status {
+            align-self: flex-start;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        .status-completed {
+            background-color: rgba(229, 226, 218, 0.15);
+            color: #e5e2da;
+        }
+
+        .status-ongoing {
+            background-color: rgba(229, 226, 218, 0.15);
+            color: #e5e2da;
+        }
+
+        .status-upcoming {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #888;
+        }
+
+        .project-card h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.25rem;
+            color: #e5e2da;
+            margin-bottom: 12px;
+        }
+
+        /* --------------------------------------------------
+           SIDOBADGE
+        -------------------------------------------------- */
+        /* RESPONSIVITET FÖR MOBIL */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+            nav ul {
+                display: none;
+            }
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            .about-content {
+                text-align: center;
+            }
+            .section {
+                padding: 120px 20px 60px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6HRJG7H"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6HRJG7H"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header>
+        <a href="#home" class="logo">
+            <img src="min-bild.jpg" alt="Rahel Rubil">
+            <div>RAHEL RUBIL<br>GROWTH MARKETER</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#about">Om mig</a></li>
+                <li><a href="#skills">Kompetenser</a></li>
+                <li><a href="#projects">Kurser & Case</a></li>
+            </ul>
+        </nav>
+    </header>
 
-   <!-- Header med bild och namn -->
-   <header>
-       <div class="logo" style="display: flex; align-items: center; gap: 12px;">
-           <img src="min-bild.jpg" style="height: 85px; width: 85px; border-radius: 50%; object-fit: cover;">
-           <div>RAHEL RUBIL<br>GROWTH MARKETER</div>
-       </div>
-       <div class="menu-btn">
-           <span></span>
-           <span></span>
-       </div>
-   </header>
+    <section class="section" id="home">
+        <h1 class="hero-title">
+            GROWTH<br>
+            MARKETER<br>
+            <span class="title-italic">in the making</span>
+        </h1>
+    </section>
 
+    <section class="section" id="about">
+        <h2 class="section-title">
+            BERGHS SCHOOL<br>
+            <span class="title-italic">of communication</span>
+        </h2>
+       
+        <div class="about-container">
+            <div class="about-image-box">
+                <img src="min-bild.jpg" alt="Rahel Rubil Profilbild" class="about-image">
+            </div>
+            <div class="about-content">
+                <p class="body-text">
+                    Jag studerar just nu till Growth Marketer på Berghs School of Communication. Jag är starkt resultatinriktad och drivs av att skapa logisk struktur och ordning i digitala tillväxtprojekt.
+                </p>
+                <p class="body-text">
+                    Genom ett djupt analytiskt förhållningssätt identifierar jag tillväxtmöjligheter kritiskt och styr upp konverteringsresan så att varje kanal levererar på topp.
+                </p>
+            </div>
+        </div>
+    </section>
 
-   <!-- Exakt centrerad rubrik -->
-   <main>
-       <h1 class="hero-title">
-           GROWTH<br>
-           MARKETER<br>
-           <span class="title-italic">in the making</span>
-       </h1>
-   </main>
+    <section class="section" id="skills">
+        <h2 class="section-title">
+            CORE<br>
+            <span class="title-italic">Competencies</span>
+        </h2>
 
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Data & Analytics</h3>
+                <div class="tag-container">
+                    <span class="tag">GA4</span>
+                    <span class="tag">Google Tag Manager</span>
+                    <span class="tag">Looker Studio</span>
+                    <span class="tag">SQL Basics</span>
+                </div>
+            </div>
 
-   <!-- Sidobadge längst ner till höger -->
-   <div class="side-badge">
-       <span class="w-logo">W.</span>
-       <span class="badge-text">Honors</span>
-   </div>
+            <div class="skill-card">
+                <h3>Growth Strategy & Testing</h3>
+                <div class="tag-container">
+                    <span class="tag">Experimentation</span>
+                    <span class="tag">Hypothesis Frameworks</span>
+                    <span class="tag">Funnel Optimization</span>
+                    <span class="tag">Customer Research</span>
+                </div>
+            </div>
 
+            <div class="skill-card">
+                <h3>Paid & Organic</h3>
+                <div class="tag-container">
+                    <span class="tag">Meta Ads</span>
+                    <span class="tag">Google Ads</span>
+                    <span class="tag">Technical SEO</span>
+                    <span class="tag">TikTok Ads</span>
+                </div>
+            </div>
 
+            <div class="skill-card">
+                <h3>CRM & Retention</h3>
+                <div class="tag-container">
+                    <span class="tag">HubSpot</span>
+                    <span class="tag">Klaviyo</span>
+                    <span class="tag">Email Automation</span>
+                    <span class="tag">Churn Reduction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <h2 class="section-title">
+            SELECTED<br>
+            <span class="title-italic">courses & cases</span>
+        </h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <span class="project-status status-completed">Slutfört</span>
+                <h3>Skarpt Kundcase - Growth Strategy</h3>
+                <p class="body-text">
+                    Utveckling av en heltäckande tillväxtstrategi för ett svenskt e-handelsbolag med fokus på GA4-spårning och A/B-testning av landningssidor.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-status status-ongoing">Pågående</span>
+                <h3>Sökmarknadsföring & SEO</h3>
+                <p class="body-text">
+                    Djupdykning i teknisk SEO, sökordsanalys och optimering av både betald och organisk synlighet för B2B- och B2C-varumärken.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-status status-upcoming">Kommande</span>
+                <h3>Examensarbete Berghs</h3>
+                <p class="body-text">
+                    Avslutande examensprojekt där hela verktygslådan inom Growth Marketing appliceras på en skarp utmaning för en extern uppdragsgivare.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="side-badge">
+        <span class="w-logo">W.</span>
+        <span class="badge-text">Honors</span>
+    </div>
 </body>
 </html>
