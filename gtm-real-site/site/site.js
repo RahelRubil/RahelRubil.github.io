@@ -179,6 +179,11 @@ window.dataLayer = window.dataLayer || [];
         if (news) {
             news.addEventListener('submit', function (e) {
                 e.preventDefault();
+    window.dataLayer.push({
+        event: 'newsletter_signup',
+        form: { id: 'footer-newsletter', location: 'footer' },
+        user: { consent: { marketing: true } }
+    });
                 news.innerHTML = '<p class="notice">Thanks — you are on the list.</p>';
             });
         }
