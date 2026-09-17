@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solna-klyftan: Filmstaden vs Hagalund</title>
+    <!-- Laddar Chart.js från CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            color: #111;
+            margin-bottom: 5px;
+        }
+        p.subtitle {
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        .card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Solna-klyftan: Filmstaden vs. Hagalund</h1>
+    <p class="subtitle">Äter högre avgifter och skulder upp det billigare kvadratmeterpriset?</p>
+
+    <div class="grid">
+        <!-- Graf 1: Kvadratmeterpris -->
+        <div class="card">
+            <h3>Snittpris (kr/m²)</h3>
+            <canvas id="priceChart"></canvas>
+        </div>
+
+        <!-- Graf 2: Skuld per kvm -->
+        <div class="card">
+            <h3>Skuld per kvm (kr)</h3>
+            <canvas id="debtChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Graf 3: Månadsavgift per kvm (full bredd) -->
+    <div class="card">
+        <h3>Månadsavgift per kvm och månad (kr/m²)</h3>
+        <canvas id="feeChart"></canvas>
+    </div>
+
+    <script>
+        // Gemensamma etiketter för områdena
+        const areas = ['Filmstaden (30-tal)', 'Hagalund (Miljonprogram)'];
+
+        // 1. Kvadratmeterpris-graf
+        new Chart(document.getElementById('priceChart'), {
+            type: 'bar',
+            data: {
+                labels: areas,
+                datasets: [{
+                    label: 'kr/m²',
+                    data: [81833, 40333],
+                    backgroundColor: ['#2b5c8f', '#d9534f'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true } }
+            }
+        });
+
+        // 2. Skuld per kvm-graf
+        new Chart(document.getElementById('debtChart'), {
+            type: 'bar',
+            data: {
+                labels: areas,
+                datasets: [{
+                    label: 'Skuld kr/m²',
+                    data: [3650, 10750],
+                    backgroundColor: ['#4682b4', '#e67e22'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true } }
+            }
+        });
+
+        // 3. Månadsavgift per kvm-graf
+        new Chart(document.getElementById('feeChart'), {
+            type: 'bar',
+            data: {
+                labels: areas,
+                datasets: [{
+                    label: 'Månadsavgift kr/m²/mån',
+                    data: [51, 69],
+                    backgroundColor: ['#5bc0de', '#f0ad4e'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true } }
+            }
+        });
+    </script>
+
+</body>
+</html>

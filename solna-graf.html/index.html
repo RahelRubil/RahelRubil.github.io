@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+   <title>Två Solna – två helt olika världar</title>
+
+
+   <style>
+       * {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+       }
+
+
+       html {
+           scroll-behavior: smooth;
+       }
+
+
+       body {
+           font-family: Arial, Helvetica, sans-serif;
+           background: #f4f1e9;
+           color: #111;
+       }
+
+
+       /* =========================
+          NAVIGATION
+       ========================= */
+
+
+       nav {
+           position: sticky;
+           top: 0;
+           z-index: 1000;
+           background: #111;
+           color: white;
+           height: 64px;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           padding: 0 6%;
+       }
+
+
+       .logo {
+           font-size: 22px;
+           font-weight: 900;
+           letter-spacing: 2px;
+       }
+
+
+       .logo span {
+           color: #ffd719;
+       }
+
+
+       nav ul {
+           display: flex;
+           gap: 30px;
+           list-style: none;
+       }
+
+
+       nav a {
+           color: white;
+           text-decoration: none;
+           font-weight: bold;
+           font-size: 14px;
+       }
+
+
+       nav a:hover {
+           color: #ffd719;
+       }
+
+
+       /* =========================
+          HERO
+       ========================= */
+
+
+       .hero {
+           min-height: 90vh;
+           background:
+               linear-gradient(
+                   rgba(0,0,0,0.25),
+                   rgba(0,0,0,0.65)
+               ),
+               url("image (1).png") center top / cover no-repeat;
+
+
+           display: flex;
+           align-items: flex-end;
+           padding: 7%;
+           color: white;
+       }
+
+
+       .hero-content {
+           max-width: 900px;
+       }
+
+
+       .yellow-label {
+           display: inline-block;
+           background: #ffd719;
+           color: #111;
+           padding: 10px 20px;
+           font-size: 20px;
+           font-weight: 900;
+           transform: rotate(-2deg);
+           margin-bottom: 20px;
+       }
+
+
+       .hero h1 {
+           font-size: clamp(48px, 8vw, 105px);
+           line-height: 0.9;
+           text-transform: uppercase;
+           font-weight: 1000;
+           letter-spacing: -4px;
+       }
+
+
+       .hero h1 span {
+           color: #ffd719;
+       }
+
+
+       .hero p {
+           font-size: 22px;
+           margin-top: 25px;
+           max-width: 700px;
+       }
+
+
+       /* =========================
+          INTRO
+       ========================= */
+
+
+       .intro {
+           padding: 90px 8%;
+           max-width: 1100px;
+           margin: auto;
+       }
+
+
+       .intro h2 {
+           font-size: clamp(36px, 5vw, 65px);
+           line-height: 1;
+           margin-bottom: 30px;
+       }
+
+
+       .intro p {
+           font-size: 21px;
+           line-height: 1.7;
+           color: #333;
+       }
+
+
+       /* =========================
+          DATA
+       ========================= */
+
+
+       .data-section {
+           background: #111;
+           color: white;
+           padding: 90px 7%;
+       }
+
+
+       .section-title {
+           max-width: 1100px;
+           margin: 0 auto 60px;
+       }
+
+
+       .section-title h2 {
+           font-size: clamp(40px, 6vw, 75px);
+           line-height: 0.95;
+       }
+
+
+       .section-title h2 span {
+           color: #ffd719;
+       }
+
+
+       .section-title p {
+           margin-top: 20px;
+           font-size: 19px;
+           color: #ccc;
+       }
+
+
+       .comparison {
+           max-width: 1100px;
+           margin: auto;
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           gap: 25px;
+       }
+
+
+       .data-card {
+           background: #f5f2e9;
+           color: #111;
+           padding: 35px;
+       }
+
+
+       .data-card h3 {
+           font-size: 28px;
+           margin-bottom: 30px;
+       }
+
+
+       .numbers {
+           display: flex;
+           align-items: flex-end;
+           gap: 30px;
+           height: 280px;
+           border-bottom: 2px solid #111;
+           padding: 0 20px;
+       }
+
+
+       .bar-wrapper {
+           flex: 1;
+           height: 100%;
+           display: flex;
+           flex-direction: column;
+           justify-content: flex-end;
+           align-items: center;
+       }
+
+
+       .bar {
+           width: 80%;
+           background: #ed5b50;
+           position: relative;
+       }
+
+
+       .bar.blue {
+           background: #4d83ad;
+       }
+
+
+       .bar-price-film {
+           height: 220px;
+       }
+
+
+       .bar-price-hag {
+           height: 108px;
+       }
+
+
+       .bar-debt-film {
+           height: 75px;
+       }
+
+
+       .bar-debt-hag {
+           height: 220px;
+       }
+
+
+       .bar-fee-film {
+           height: 95px;
+       }
+
+
+       .bar-fee-hag {
+           height: 220px;
+       }
+
+
+       .bar-number {
+           font-size: 23px;
+           font-weight: 900;
+           margin-bottom: 8px;
+       }
+
+
+       .bar-name {
+           font-weight: bold;
+           margin-top: 12px;
+           text-align: center;
+       }
+
+
+       /* =========================
+          FACT BOX
+       ========================= */
+
+
+       .fact {
+           max-width: 1100px;
+           margin: 50px auto 0;
+           background: #ffd719;
+           color: #111;
+           padding: 35px;
+           transform: rotate(-1deg);
+       }
+
+
+       .fact h3 {
+           font-size: 32px;
+           margin-bottom: 10px;
+       }
+
+
+       .fact p {
+           font-size: 20px;
+           line-height: 1.5;
+       }
+
+
+       /* =========================
+          NEWSPAPER
+       ========================= */
+
+
+       .newspaper-section {
+           padding: 110px 5%;
+           background: #e7e2d7;
+       }
+
+
+       .newspaper-title {
+           max-width: 1100px;
+           margin: auto auto 45px;
+           text-align: center;
+       }
+
+
+       .newspaper-title h2 {
+           font-family: Georgia, serif;
+           font-size: clamp(40px, 6vw, 75px);
+       }
+
+
+       .newspaper-title p {
+           margin-top: 15px;
+           font-size: 18px;
+       }
+
+
+       .newspaper {
+           max-width: 1000px;
+           margin: auto;
+           box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+           background: white;
+       }
+
+
+       .newspaper img {
+           width: 100%;
+           display: block;
+       }
+
+
+       /* =========================
+          INSTAGRAM
+       ========================= */
+
+
+       .instagram-section {
+           padding: 110px 5%;
+           background: #111;
+           color: white;
+       }
+
+
+       .instagram-container {
+           max-width: 1200px;
+           margin: auto;
+       }
+
+
+       .instagram-heading {
+           text-align: center;
+           margin-bottom: 60px;
+       }
+
+
+       .instagram-heading h2 {
+           font-size: clamp(40px, 6vw, 70px);
+       }
+
+
+       .instagram-heading span {
+           color: #ffd719;
+       }
+
+
+       .instagram-heading p {
+           color: #bbb;
+           font-size: 19px;
+           margin-top: 15px;
+       }
+
+
+       .instagram-post {
+           max-width: 900px;
+           margin: auto;
+           background: white;
+           padding: 12px;
+           box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+       }
+
+
+       .instagram-post img {
+           display: block;
+           width: 100%;
+           height: auto;
+       }
+
+
+       /* =========================
+          ARTICLE
+       ========================= */
+
+
+       .article {
+           max-width: 1000px;
+           margin: auto;
+           padding: 110px 30px;
+       }
+
+
+       .article-label {
+           display: inline-block;
+           background: #ffd719;
+           padding: 8px 15px;
+           font-weight: 900;
+           margin-bottom: 20px;
+       }
+
+
+       .article h2 {
+           font-family: Georgia, serif;
+           font-size: clamp(40px, 6vw, 70px);
+           line-height: 1;
+           margin-bottom: 35px;
+       }
+
+
+       .article p {
+           font-family: Georgia, serif;
+           font-size: 21px;
+           line-height: 1.8;
+           margin-bottom: 25px;
+       }
+
+
+       .article strong {
+           color: #111;
+       }
+
+
+       /* =========================
+          TWO AREAS
+       ========================= */
+
+
+       .areas {
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           min-height: 500px;
+       }
+
+
+       .area {
+           padding: 70px 8%;
+           color: white;
+           display: flex;
+           flex-direction: column;
+           justify-content: flex-end;
+       }
+
+
+       .filmstaden {
+           background:
+               linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)),
+               url("image (1).png") left center / cover;
+       }
+
+
+       .hagalund {
+           background:
+               linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)),
+               url("image (1).png") right center / cover;
+       }
+
+
+       .area h3 {
+           font-size: 50px;
+           text-transform: uppercase;
+       }
+
+
+       .area p {
+           font-size: 19px;
+           margin-top: 10px;
+       }
+
+
+       /* =========================
+          QUESTION
+       ========================= */
+
+
+       .question {
+           background: #ffd719;
+           padding: 100px 8%;
+           text-align: center;
+       }
+
+
+       .question h2 {
+           font-size: clamp(40px, 7vw, 85px);
+           line-height: 0.95;
+           max-width: 1000px;
+           margin: auto;
+       }
+
+
+       .question p {
+           max-width: 700px;
+           margin: 30px auto 0;
+           font-size: 21px;
+           line-height: 1.5;
+       }
+
+
+       /* =========================
+          FOOTER
+       ========================= */
+
+
+       footer {
+           background: #111;
+           color: white;
+           padding: 50px 8%;
+           text-align: center;
+       }
+
+
+       footer h3 {
+           font-size: 30px;
+           margin-bottom: 10px;
+       }
+
+
+       footer p {
+           color: #aaa;
+       }
+
+
+       /* =========================
+          RESPONSIVE
+       ========================= */
+
+
+       @media (max-width: 800px) {
+
+
+           nav {
+               padding: 0 20px;
+           }
+
+
+           nav ul {
+               display: none;
+           }
+
+
+           .hero {
+               min-height: 75vh;
+               padding: 30px;
+           }
+
+
+           .hero h1 {
+               letter-spacing: -2px;
+           }
+
+
+           .hero p {
+               font-size: 17px;
+           }
+
+
+           .comparison {
+               grid-template-columns: 1fr;
+           }
+
+
+           .areas {
+               grid-template-columns: 1fr;
+           }
+
+
+           .area {
+               min-height: 400px;
+           }
+
+
+           .newspaper-section,
+           .instagram-section {
+               padding: 70px 15px;
+           }
+
+
+           .intro,
+           .article {
+               padding: 70px 25px;
+           }
+       }
+   </style>
+</head>
+
+
+<body>
+
+
+   <!-- =========================
+        NAVIGATION
+   ========================= -->
+
+
+   <nav>
+       <div class="logo">
+           TVÅ <span>SOLNA</span>
+       </div>
+
+
+       <ul>
+           <li><a href="#story">Story</a></li>
+           <li><a href="#data">Siffrorna</a></li>
+           <li><a href="#tidning">Tidningen</a></li>
+           <li><a href="#instagram">Instagram</a></li>
+       </ul>
+   </nav>
+
+
+
+
+   <!-- =========================
+        HERO
+   ========================= -->
+
+
+   <header class="hero">
+
+
+       <div class="hero-content">
+
+
+
+
+       </div>
+
+
+   </header>
+
+
+
+
+   <!-- =========================
+        INTRO / STORY
+   ========================= -->
+
+
+   <section class="intro" id="story">
+
+
+       <h2>
+           Två områden.<br>
+           Samma Solna.
+       </h2>
+
+
+       <p>
+           Filmstaden och Hagalund ligger bara några kilometer från
+           varandra. Ändå kan bostadspriserna skilja sig dramatiskt.
+       </p>
+
+
+       <br>
+
+
+       <p>
+           På ytan ser Hagalund betydligt billigare ut.
+           Men när man också räknar med föreningarnas skulder
+           och månadsavgifter förändras bilden.
+       </p>
+
+
+   </section>
+
+
+
+
+   <!-- =========================
+        DATA
+   ========================= -->
+
+
+   <section class="data-section" id="data">
+
+
+       <div class="section-title">
+
+
+           <h2>
+               Siffrorna<br>
+               <span>berättar mer.</span>
+           </h2>
+
+
+           <p>
+               En jämförelse mellan Filmstaden och Hagalund.
+           </p>
+
+
+       </div>
+
+
+
+
+       <div class="comparison">
+
+
+           <!-- KVADRATMETERPRIS -->
+
+
+           <div class="data-card">
+
+
+               <h3>Kvm-priset</h3>
+
+
+               <div class="numbers">
+
+
+                   <div class="bar-wrapper">
+
+
+                       <div class="bar-number">
+                           82 000 kr
+                       </div>
+
+
+                       <div class="bar bar-price-film"></div>
+
+
+                       <div class="bar-name">
+                           Filmstaden
+                       </div>
+
+
+                   </div>
+
+
+
+
+                   <div class="bar-wrapper">
+
+
+                       <div class="bar-number">
+                           40 000 kr
+                       </div>
+
+
+                       <div class="bar blue bar-price-hag"></div>
+
+
+                       <div class="bar-name">
+                           Hagalund
+                       </div>
+
+
+                   </div>
+
+
+               </div>
+
+
+           </div>
+
+
+
+
+           <!-- SKULD -->
+
+
+           <div class="data-card">
+
+
+               <h3>Skuld per kvm</h3>
+
+
+               <div class="numbers">
+
+
+                   <div class="bar-wrapper">
+
+
+                       <div class="bar-number">
+                           3 650 kr
+                       </div>
+
+
+                       <div class="bar bar-debt-film"></div>
+
+
+                       <div class="bar-name">
+                           Filmstaden
+                       </div>
+
+
+                   </div>
+
+
+
+
+                   <div class="bar-wrapper">
+
+
+                       <div class="bar-number">
+                           10 750 kr
+                       </div>
+
+
+                       <div class="bar blue bar-debt-hag"></div>
+
+
+                       <div class="bar-name">
+                           Hagalund
+                       </div>
+
+
+                   </div>
+
+
+               </div>
+
+
+           </div>
+
+
+
+
+           <!-- AVGIFT -->
+
+
+           <div class="data-card">
+
+
+               <h3>Månadsavgift per kvm</h3>
+
+
+               <div class="numbers">
+
+
+                   <div class="bar-wrapper">
+
+
+                       <div class="bar-number">
+                           1 250 kr
+                       </div>
+
+
+                       <div class="bar bar-fee-film"></div>
+
+
+                       <div class="bar-name">
+                           Filmstaden
+                       </div>
+
+
+                   </div>
+
+
+
+
+                   <div class="bar-wrapper">
+
+
+                       <div class="bar-number">
+                           2 900 kr
+                       </div>
+
+
+                       <div class="bar blue bar-fee-hag"></div>
+
+
+                       <div class="bar-name">
+                           Hagalund
+                       </div>
+
+
+                   </div>
+
+
+               </div>
+
+
+           </div>
+
+
+
+
+           <!-- FÖRKLARING -->
+
+
+           <div class="data-card">
+
+
+               <h3>Varför spelar skulden roll?</h3>
+
+
+               <p style="font-size:20px; line-height:1.7;">
+                   Ett lågt pris på själva lägenheten berättar inte
+                   hela historien.
+               </p>
+
+
+               <br>
+
+
+               <p style="font-size:20px; line-height:1.7;">
+                   Om bostadsrättsföreningen har stora lån kan
+                   skuldsättningen påverka föreningens ekonomi
+                   och månadsavgiften.
+               </p>
+
+
+               <br>
+
+
+               <p style="font-size:20px; line-height:1.7;">
+                   Därför är det relevant att titta på både
+                   <strong>köpeskillingen, skulden och avgiften.</strong>
+               </p>
+
+
+           </div>
+
+
+       </div>
+
+
+
+
+       <div class="fact">
+
+
+           <h3>Varför?</h3>
+
+
+           <p>
+               Hagalund har lägre kvadratmeterpris,
+               men högre skuldsättning och högre månadsavgift
+               i den här jämförelsen.
+           </p>
+
+
+       </div>
+
+
+   </section>
+
+
+
+
+   <!-- =========================
+        TIDNINGEN
+        DEN EXAKTA BILDEN FRÅN STORYBOARDEN
+   ========================= -->
+
+
+   <section class="newspaper-section" id="tidning">
+
+
+       <div class="newspaper-title">
+
+
+           <h2>Tidningsframsidan</h2>
+
+
+           <p>
+               Den färdiga journalistiska presentationen av storyn.
+           </p>
+
+
+       </div>
+
+
+
+
+       <div class="newspaper">
+
+
+           <!--
+               DIN TIDNINGSBILD
+               Filen ska heta exakt:
+               image (1).png
+           -->
+
+
+           <img
+               src="image (1).png"
+               alt="Tidningsframsida om Filmstaden och Hagalund"
+           >
+
+
+       </div>
+
+
+   </section>
+
+
+
+
+   <!-- =========================
+        ARTIKEL
+   ========================= -->
+
+
+   <article class="article">
+
+
+       <div class="article-label">
+           REPORTAGE
+       </div>
+
+
+       <h2>
+           Två Solna – två helt olika världar
+       </h2>
+
+
+       <p>
+           Filmstaden och Hagalund ligger nära varandra geografiskt,
+           men bostadsmarknaden berättar två olika historier.
+       </p>
+
+
+       <p>
+           I Filmstaden ligger kvadratmeterpriset i vår jämförelse
+           på cirka <strong>82 000 kronor</strong>.
+           I Hagalund är motsvarande siffra cirka
+           <strong>40 000 kronor</strong>.
+       </p>
+
+
+       <p>
+           Det är en mycket stor skillnad vid första anblick.
+           Men bostadsrättens ekonomi består av mer än priset
+           på själva lägenheten.
+       </p>
+
+
+       <p>
+           Föreningens skuldsättning är en annan viktig del.
+           I jämförelsen ligger skulden per kvadratmeter på
+           <strong>3 650 kronor i Filmstaden</strong> mot
+           <strong>10 750 kronor i Hagalund</strong>.
+       </p>
+
+
+       <p>
+           Även månadsavgiften skiljer sig:
+           <strong>1 250 kronor</strong> respektive
+           <strong>2 900 kronor per kvadratmeter</strong>
+           enligt materialet.
+       </p>
+
+
+   </article>
+
+
+
+
+   <!-- =========================
+        INSTAGRAM
+        DEN EXAKTA INSTAGRAMBILDEN
+   ========================= -->
+
+
+   <section class="instagram-section" id="instagram">
+
+
+       <div class="instagram-container">
+
+
+           <div class="instagram-heading">
+
+
+               <h2>
+                   Storyn på <span>Instagram</span>
+               </h2>
+
+
+               <p>
+                   Samma material – anpassat som en visuell carousel.
+               </p>
+
+
+           </div>
+
+
+
+
+           <div class="instagram-post">
+
+
+               <!--
+                   DIN INSTAGRAMBILD
+                   Filen ska heta exakt:
+                   image.png
+               -->
+
+
+               <img
+                   src="image.png"
+                   alt="Instagram-carousel om Filmstaden och Hagalund"
+               >
+
+
+           </div>
+
+
+       </div>
+
+
+   </section>
+
+
+
+
+   <!-- =========================
+        AREAS
+   ========================= -->
+
+
+   <section class="areas">
+
+
+       <div class="area filmstaden">
+
+
+           <h3>Filmstaden</h3>
+
+
+           <p>
+               Högre kvadratmeterpris och lägre föreningsskuld
+               i jämförelsen.
+           </p>
+
+
+       </div>
+
+
+
+
+       <div class="area hagalund">
+
+
+           <h3>Hagalund</h3>
+
+
+           <p>
+               Lägre kvadratmeterpris men högre föreningsskuld
+               och månadsavgift i jämförelsen.
+           </p>
+
+
+       </div>
+
+
+   </section>
+
+
+
+
+   <!-- =========================
+        QUESTION
+   ========================= -->
+
+
+   <section class="question">
+
+
+       <h2>
+           Två områden.<br>
+           Samma Solna.
+       </h2>
+
+
+       <p>
+           Billigare kvadratmeter – men högre skulder och avgifter.
+           Vad tycker du?
+       </p>
+
+
+   </section>
+
+
+
+
+   <!-- =========================
+        FOOTER
+   ========================= -->
+
+
+   <footer>
+
+
+       <h3>TVÅ SOLNA</h3>
+
+
+       <p>
+           Ett visuellt reportage om bostäder, priser och skillnader
+           inom samma kommun.
+       </p>
+
+
+   </footer>
+
+
+
+
+</body>
+</html>
+

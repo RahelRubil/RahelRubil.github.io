@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,662 +9,1557 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TQGF3CPX');</script>
 <!-- End Google Tag Manager -->
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Growth Marketer Portfolio - Rahel Rubil</title>
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-   <style>
-       /* --------------------------------------------------
-          RESET & GLOBALA STILER
-       -------------------------------------------------- */
-       * {
-           box-sizing: border-box;
-           margin: 0;
-           padding: 0;
-       }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growth Marketer Portfolio - Rahel Rubil</title>
 
-       html {
-           scroll-behavior: smooth;
-       }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-       body {
-           background-color: #18191b;
-           color: #e5e2da;
-           font-family: 'Italiana', 'Playfair Display', serif;
-           overflow-x: hidden;
-           line-height: 1.5;
-       }
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-       /* SCROLL REVEAL (Safe fade-up with stagger) */
-       .reveal-scroll {
-           opacity: 0;
-           transform: translateY(24px);
-           transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-           transition-delay: var(--delay, 0s);
-           will-change: opacity, transform;
-       }
+<style>
 
-       .reveal-scroll.is-visible {
-           opacity: 1;
-           transform: translateY(0);
-       }
+    /* --------------------------------------------------
+       RESET & GLOBALA STILER
+    -------------------------------------------------- */
 
-       /* --------------------------------------------------
-          HEADER & NAVIGERING
-       -------------------------------------------------- */
-       header {
-           position: fixed;
-           top: 0;
-           left: 0;
-           width: 100%;
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-           padding: 25px 50px;
-           z-index: 1000;
-           background-color: rgba(24, 25, 27, 0.85);
-           backdrop-filter: blur(10px);
-           border-bottom: 1px solid rgba(229, 226, 218, 0.05);
-       }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-       .logo {
-           font-family: 'Plus Jakarta Sans', sans-serif;
-           font-size: 0.85rem;
-           font-weight: 500;
-           letter-spacing: 1px;
-           line-height: 1.2;
-           text-transform: uppercase;
-           color: #e5e2da;
-           display: flex;
-           align-items: center;
-           gap: 12px;
-           text-decoration: none;
-       }
+    html {
+        scroll-behavior: smooth;
+    }
 
-       .logo img {
-           height: 65px;
-           width: 65px;
-           border-radius: 50%;
-           object-fit: cover;
-           border: 1px solid rgba(229, 226, 218, 0.2);
-       }
+    body {
+        background-color: #18191b;
+        color: #e5e2da;
+        font-family: 'Italiana', 'Playfair Display', serif;
+        overflow-x: hidden;
+        line-height: 1.5;
+    }
 
-       nav ul {
-           display: flex;
-           gap: 30px;
-           list-style: none;
-       }
 
-       nav a {
-           font-family: 'Plus Jakarta Sans', sans-serif;
-           font-size: 0.8rem;
-           text-transform: uppercase;
-           letter-spacing: 1.5px;
-           color: #e5e2da;
-           text-decoration: none;
-           transition: color 0.3s ease;
-       }
+    /* --------------------------------------------------
+       SCROLL REVEAL
+    -------------------------------------------------- */
 
-       nav a:hover {
-           color: #ffffff;
-       }
+    .reveal-scroll {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+            opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+            transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        transition-delay: var(--delay, 0s);
+        will-change: opacity, transform;
+    }
 
-       /* --------------------------------------------------
-          SEKTIONSSTRUKTUR
-       -------------------------------------------------- */
-       .section {
-           min-height: 100vh;
-           display: flex;
-           flex-direction: column;
-           justify-content: center;
-           align-items: center;
-           padding: 140px 10% 80px 10%;
-           width: 100%;
-           position: relative;
-       }
+    .reveal-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-       .hero-title {
-           font-size: clamp(3rem, 7.5vw, 7rem);
-           line-height: 0.95;
-           letter-spacing: 2px;
-           text-transform: uppercase;
-           font-weight: 400;
-           color: #e5e2da;
-           text-align: center;
-       }
 
-       .section-title {
-           font-size: clamp(2.5rem, 5vw, 4.5rem);
-           line-height: 1.05;
-           letter-spacing: 1.5px;
-           text-transform: uppercase;
-           font-weight: 400;
-           color: #e5e2da;
-           margin-bottom: 25px;
-           text-align: center;
-       }
+    /* --------------------------------------------------
+       HEADER & NAVIGERING
+    -------------------------------------------------- */
 
-       .title-italic {
-           font-family: 'Playfair Display', serif;
-           font-style: italic;
-           text-transform: lowercase;
-           font-weight: 400;
-           letter-spacing: 0px;
-       }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 50px;
+        z-index: 1000;
+        background-color: rgba(24, 25, 27, 0.85);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(229, 226, 218, 0.05);
+    }
 
-       .body-text {
-           font-family: 'Plus Jakarta Sans', sans-serif;
-           font-size: 1rem;
-           color: #b3b0a8;
-           line-height: 1.7;
-           margin-bottom: 20px;
-       }
+    .logo {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: #e5e2da;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+    }
 
-       /* --------------------------------------------------
-          SEKTION 1: OM MIG
-       -------------------------------------------------- */
-       .about-container {
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           gap: 60px;
-           max-width: 1100px;
-           width: 100%;
-           margin-top: 30px;
-       }
+    .logo img {
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid rgba(229, 226, 218, 0.2);
+    }
 
-       .about-image-box {
-           flex: 1;
-           display: flex;
-           justify-content: center;
-       }
+    nav ul {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
 
-       .about-image {
-           width: 280px;
-           height: 280px;
-           border-radius: 50%;
-           object-fit: cover;
-           border: 2px solid #e5e2da;
-           box-shadow: 0 0 30px rgba(229, 226, 218, 0.1);
-       }
+    nav a {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #e5e2da;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
 
-       .about-content {
-           flex: 1.5;
-           text-align: left;
-       }
+    nav a:hover {
+        color: #ffffff;
+    }
 
-       /* --------------------------------------------------
-          SEKTION 2: KOMPETENSER
-       -------------------------------------------------- */
-       .skills-grid {
-           display: grid;
-           grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-           gap: 25px;
-           width: 100%;
-           max-width: 1200px;
-           margin-top: 40px;
-       }
 
-       .skill-card {
-           background-color: #212326;
-           border: 1px solid rgba(229, 226, 218, 0.08);
-           border-radius: 8px;
-           padding: 30px 25px;
-           text-align: left;
-           transition: transform 0.3s ease, border-color 0.3s ease;
-       }
+    /* --------------------------------------------------
+       SEKTIONSSTRUKTUR
+    -------------------------------------------------- */
 
-       .skill-card:hover {
-           transform: translateY(-5px);
-           border-color: rgba(229, 226, 218, 0.2);
-       }
+    .section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 140px 10% 80px 10%;
+        width: 100%;
+        position: relative;
+    }
 
-       .skill-card h3 {
-           font-family: 'Plus Jakarta Sans', sans-serif;
-           font-size: 1.1rem;
-           font-weight: 600;
-           color: #e5e2da;
-           margin-bottom: 20px;
-           letter-spacing: 0.5px;
-       }
+    .hero-title {
+        font-size: clamp(3rem, 7.5vw, 7rem);
+        line-height: 0.95;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #e5e2da;
+        text-align: center;
+    }
 
-       .tag-container {
-           display: flex;
-           flex-wrap: wrap;
-           gap: 8px;
-       }
+    .section-title {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 1.05;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #e5e2da;
+        margin-bottom: 25px;
+        text-align: center;
+    }
 
-       .tag {
-           font-family: 'Plus Jakarta Sans', sans-serif;
-           font-size: 0.75rem;
-           background-color: rgba(229, 226, 218, 0.08);
-           color: #e5e2da;
-           padding: 6px 12px;
-           border-radius: 4px;
-           font-weight: 600;
-       }
+    .title-italic {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        text-transform: lowercase;
+        font-weight: 400;
+        letter-spacing: 0px;
+    }
 
-       /* --------------------------------------------------
-          SEKTION 3: KURSER & CASE
-       -------------------------------------------------- */
-       .projects-grid {
-           display: grid;
-           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-           gap: 30px;
-           width: 100%;
-           max-width: 1200px;
-           margin-top: 40px;
-       }
+    .body-text {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 1rem;
+        color: #b3b0a8;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
 
-       .project-card {
-           background-color: #212326;
-           border: 1px solid rgba(229, 226, 218, 0.08);
-           border-radius: 8px;
-           padding: 35px 30px;
-           text-align: left;
-           display: flex;
-           flex-direction: column;
-           justify-content: space-between;
-       }
 
-       .project-status {
-           align-self: flex-start;
-           font-family: 'Plus Jakarta Sans', sans-serif;
-           font-size: 0.65rem;
-           font-weight: 700;
-           text-transform: uppercase;
-           letter-spacing: 1px;
-           padding: 4px 10px;
-           border-radius: 3px;
-           margin-bottom: 20px;
-       }
+    /* --------------------------------------------------
+       SEKTION 1: OM MIG
+    -------------------------------------------------- */
 
-       .status-completed {
-           background-color: rgba(229, 226, 218, 0.15);
-           color: #e5e2da;
-       }
+    .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        max-width: 1100px;
+        width: 100%;
+        margin-top: 30px;
+    }
 
-       .status-ongoing {
-           background-color: rgba(229, 226, 218, 0.15);
-           color: #e5e2da;
-       }
+    .about-image-box {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
 
-       .status-upcoming {
-           background-color: rgba(255, 255, 255, 0.05);
-           color: #888;
-       }
+    .about-image {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #e5e2da;
+        box-shadow: 0 0 30px rgba(229, 226, 218, 0.1);
+    }
 
-       .project-card h3 {
-           font-family: 'Plus Jakarta Sans', sans-serif;
-           font-size: 1.25rem;
-           color: #e5e2da;
-           margin-bottom: 12px;
-       }
+    .about-content {
+        flex: 1.5;
+        text-align: left;
+    }
 
-       .card-footer {
-           margin-top: 25px;
-       }
 
-       /* --------------------------------------------------
-          SEKTION 4: KONTAKT
-       -------------------------------------------------- */
-       .contact-card-wrapper {
-           width: 100%;
-           max-width: 600px;
-           margin-top: 40px;
-       }
+    /* --------------------------------------------------
+       SEKTION 2: KOMPETENSER
+    -------------------------------------------------- */
 
-       .contact-card {
-           background-color: #212326;
-           border: 1px solid rgba(229, 226, 218, 0.08);
-           border-radius: 8px;
-           padding: 35px 30px;
-           text-align: left;
-           display: flex;
-           flex-direction: column;
-           justify-content: space-between;
-       }
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 25px;
+        width: 100%;
+        max-width: 1200px;
+        margin-top: 40px;
+    }
 
-       .contact-actions {
-           display: flex;
-           gap: 15px;
-           flex-wrap: wrap;
-           margin-top: 30px;
-       }
+    .skill-card {
+        background-color: #212326;
+        border: 1px solid rgba(229, 226, 218, 0.08);
+        border-radius: 8px;
+        padding: 30px 25px;
+        text-align: left;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
 
-       .btn-primary {
-           font-family: 'Plus Jakarta Sans', sans-serif;
-           font-size: 0.8rem;
-           font-weight: 600;
-           text-transform: uppercase;
-           letter-spacing: 1.5px;
-           background-color: #e5e2da;
-           color: #18191b;
-           padding: 14px 28px;
-           border-radius: 4px;
-           text-decoration: none;
-           transition: opacity 0.3s ease;
-           display: inline-block;
-       }
+    .skill-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(229, 226, 218, 0.2);
+    }
 
-       .btn-primary:hover {
-           opacity: 0.85;
-       }
+    .skill-card h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #e5e2da;
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+    }
 
-       .btn-secondary {
-           font-family: 'Plus Jakarta Sans', sans-serif;
-           font-size: 0.8rem;
-           font-weight: 600;
-           text-transform: uppercase;
-           letter-spacing: 1.5px;
-           background-color: transparent;
-           color: #e5e2da;
-           border: 1px solid rgba(229, 226, 218, 0.2);
-           padding: 14px 28px;
-           border-radius: 4px;
-           text-decoration: none;
-           transition: border-color 0.3s ease;
-           display: inline-block;
-       }
+    .tag-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
 
-       .btn-secondary:hover {
-           border-color: #e5e2da;
-       }
+    .tag {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 0.75rem;
+        background-color: rgba(229, 226, 218, 0.08);
+        color: #e5e2da;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-weight: 600;
+    }
 
-       /* --------------------------------------------------
-          CIRCULAR BADGE
-       -------------------------------------------------- */
-       .circular-badge {
-           position: fixed;
-           bottom: 30px;
-           left: 30px;
-           width: 110px;
-           height: 110px;
-           z-index: 999;
-           pointer-events: none;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-       }
 
-       .circular-badge svg {
-           width: 100%;
-           height: 100%;
-           animation: spin 20s linear infinite;
-           overflow: visible;
-       }
+    /* --------------------------------------------------
+       API & WEB DEVELOPMENT
+    -------------------------------------------------- */
 
-       .circular-badge text {
-           fill: #e5e2da;
-           font-family: 'Plus Jakarta Sans', sans-serif;
-           font-size: 9.5px;
-           font-weight: 600;
-           text-transform: uppercase;
-           letter-spacing: 1.8px;
-       }
+    
+    .weather-preview {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(229, 226, 218, 0.08);
+    text-align: center;
+}
 
-       @keyframes spin {
-           from { transform: rotate(0deg); }
-           to { transform: rotate(360deg); }
-       }
+.weather-preview p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem;
+    color: #b3b0a8;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
-       /* --------------------------------------------------
-          RESPONSIVITET FÖR MOBIL
-       -------------------------------------------------- */
-       @media (max-width: 768px) {
-           header {
-               padding: 15px 20px;
-           }
-           nav ul {
-               display: none;
-           }
-           .about-container {
-               flex-direction: column;
-               text-align: center;
-               gap: 30px;
-           }
-           .about-content {
-               text-align: center;
-           }
-           .section {
-               padding: 120px 20px 60px 20px;
-           }
-           .circular-badge {
-               width: 85px;
-               height: 85px;
-               bottom: 15px;
-               left: 15px;
-           }
-       }
-   </style>
+.weather-data {
+    width: 155px;
+    height: 155px;
+    margin: 0 auto;
+
+    border: 1px solid rgba(229, 226, 218, 0.18);
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem;
+    color: #e5e2da;
+
+    line-height: 1.7;
+
+    text-align: center;
+
+    background-color: rgba(229, 226, 218, 0.025);
+}
+
+.weather-data strong {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: #e5e2da;
+}
+
+.weather-data div {
+    font-size: 0.75rem;
+}
+
+.weather-status {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.65rem;
+    color: #888;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+    /* --------------------------------------------------
+       SEKTION 3: KURSER & CASE
+    -------------------------------------------------- */
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        width: 100%;
+        max-width: 1200px;
+        margin-top: 40px;
+    }
+
+    .project-card {
+        background-color: #212326;
+        border: 1px solid rgba(229, 226, 218, 0.08);
+        border-radius: 8px;
+        padding: 35px 30px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .project-status {
+        align-self: flex-start;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 4px 10px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+    }
+
+    .status-completed {
+        background-color: rgba(229, 226, 218, 0.15);
+        color: #e5e2da;
+    }
+
+    .status-ongoing {
+        background-color: rgba(229, 226, 218, 0.15);
+        color: #e5e2da;
+    }
+
+    .status-upcoming {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #888;
+    }
+
+    .project-card h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 1.25rem;
+        color: #e5e2da;
+        margin-bottom: 12px;
+    }
+
+    .card-footer {
+        margin-top: 25px;
+    }
+
+
+    /* --------------------------------------------------
+       SEKTION 4: KONTAKT
+    -------------------------------------------------- */
+
+    .contact-card-wrapper {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 40px;
+    }
+
+    .contact-card {
+        background-color: #212326;
+        border: 1px solid rgba(229, 226, 218, 0.08);
+        border-radius: 8px;
+        padding: 35px 30px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contact-actions {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .btn-primary {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        background-color: #e5e2da;
+        color: #18191b;
+        padding: 14px 28px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+        display: inline-block;
+    }
+
+    .btn-primary:hover {
+        opacity: 0.85;
+    }
+
+    .btn-secondary {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        background-color: transparent;
+        color: #e5e2da;
+        border: 1px solid rgba(229, 226, 218, 0.2);
+        padding: 14px 28px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: border-color 0.3s ease;
+        display: inline-block;
+    }
+
+    .btn-secondary:hover {
+        border-color: #e5e2da;
+    }
+
+
+    /* --------------------------------------------------
+       CIRCULAR BADGE
+    -------------------------------------------------- */
+
+    .circular-badge {
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        width: 110px;
+        height: 110px;
+        z-index: 999;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circular-badge svg {
+        width: 100%;
+        height: 100%;
+        animation: spin 20s linear infinite;
+        overflow: visible;
+    }
+
+    .circular-badge text {
+        fill: #e5e2da;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 9.5px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    /* --------------------------------------------------
+       RESPONSIVITET FÖR MOBIL
+    -------------------------------------------------- */
+
+    @media (max-width: 768px) {
+
+        header {
+            padding: 15px 20px;
+        }
+
+        nav ul {
+            display: none;
+        }
+
+        .about-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+        }
+
+        .about-content {
+            text-align: center;
+        }
+
+        .section {
+            padding: 120px 20px 60px 20px;
+        }
+
+        .circular-badge {
+            width: 85px;
+            height: 85px;
+            bottom: 15px;
+            left: 15px;
+        }
+    }
+
+</style>
+
 </head>
+
+
 <body>
-   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6HRJG7H"
-   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <header>
-       <a href="#home" class="logo">
-           <img src="rahel.jpg" alt="Rahel Rubil">
-           <div>RAHEL RUBIL<br>GROWTH MARKETER</div>
-       </a>
-       <nav>
-           <ul>
-               <li><a href="#about">Om mig</a></li>
-               <li><a href="#skills">Kompetenser</a></li>
-               <li><a href="#projects">Kurser & Case</a></li>
-               <li><a href="#contact">Kontakt</a></li>
-           </ul>
-       </nav>
-   </header>
 
-   <section class="section" id="home">
-       <h1 class="hero-title">
-           GROWTH<br>
-           MARKETER<br>
-           <span class="title-italic" id="decrypt-hero">in the making</span>
-       </h1>
-   </section>
+<!-- Google Tag Manager noscript -->
+<noscript>
+    <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-K6HRJG7H"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden">
+    </iframe>
+</noscript>
 
-   <section class="section" id="about">
-       <h2 class="section-title">
-           BERGHS SCHOOL<br>
-           <span class="title-italic">of communication</span>
-       </h2>
-   
-       <div class="about-container">
-           <div class="about-image-box">
-               <img src="rahel.jpg" alt="Rahel Rubil Profilbild" class="about-image">
-           </div>
-           <div class="about-content">
-               <p class="body-text">
-                   Berghs-student med inriktning Growth Marketing med flerårig erfarenhet av versamhetsansvar och verksamhetsutveckling. Drivs av att ersätta gissningar med mätbar logi – från spårningssättning i GTM och GA4 till att rigga hypoteser för lönsam tillväxt.
-               </p>
-               <p class="body-text">
-                   Översätter digitalt användarbeteende, gapanalys och spårningsdata till skalbara optimeringsåtgärder med stöd av AI-stödda insiktsverktyg.
-               </p>
-           </div>
-       </div>
-   </section>
 
-   <section class="section" id="skills">
-       <h2 class="section-title">
-           CORE<br>
-           <span class="title-italic">Competencies</span>
-       </h2>
+<header>
 
-       <div class="skills-grid">
-           <div class="skill-card reveal-scroll" style="--delay: 0.05s;">
-               <h3>Data & Analytics</h3>
-               <div class="tag-container">
-                   <span class="tag">GA4</span>
-                   <span class="tag">Google Tag Manager</span>
-                   <span class="tag">Looker Studio</span>
-                   <span class="tag">Data Visualisation</span>
-                   <span class="tag">Spreadsheet Modelling</span>
-               </div>
-           </div>
+    <a href="#home" class="logo">
 
-           <div class="skill-card reveal-scroll" style="--delay: 0.12s;">
-               <h3>Growth Strategy & Testing</h3>
-               <div class="tag-container">
-                   <span class="tag">Growth Mindset</span>
-                   <span class="tag">Experimentation</span>
-                   <span class="tag">Hypothesis Frameworks</span>
-                   <span class="tag">Funnel Optimization</span>
-                   <span class="tag">Profitable Cost Units</span>
-               </div>
-           </div>
+        <img src="rahel.jpg" alt="Rahel Rubil">
 
-           <div class="skill-card reveal-scroll" style="--delay: 0.19s;">
-               <h3>Paid & Organic</h3>
-               <div class="tag-container">
-                   <span class="tag">Meta Ads</span>
-                   <span class="tag">Google Ads</span>
-                   <span class="tag">Technical SEO</span>
-                   <span class="tag">Attribution & Tracking</span>
-               </div>
-           </div>
+        <div>
+            RAHEL RUBIL<br>
+            GROWTH MARKETER
+        </div>
 
-           <div class="skill-card reveal-scroll" style="--delay: 0.26s;">
-               <h3>AI & Insight Tooling</h3>
-               <div class="tag-container">
-                   <span class="tag">AI-Augmented Analysis</span>
-                   <span class="tag">HubSpot</span>
-                   <span class="tag">Klaviyo</span>
-                   <span class="tag">Process Efficiency</span>
-               </div>
-           </div>
-       </div>
-   </section>
+    </a>
 
-   <section class="section" id="projects">
-       <h2 class="section-title">
-           SELECTED<br>
-           <span class="title-italic">courses & cases</span>
-       </h2>
 
-       <div class="projects-grid">
-           <div class="project-card reveal-scroll" style="--delay: 0.08s;">
-               <div>
-                   <span class="project-status status-completed">Slutfört</span>
-                   <h3>Skarpt Kundcase - Growth Strategy & Kungliga Operan</h3>
-                   <p class="body-text">
-                       Utveckling av en heltäckande tillväxtstrategi för ett svenskt e-handelsbolag med fokus på GA4-spårning och A/B-testning av landningssidor (inklusive gapanalys, hypotesramverk och visualisering av trattmätpunkter till profitable cost). Utvecklade även ett skarpare case för Kungliga Operan med målet att ta fram en kampanj för att locka fler besökare till operan.
-                   </p>
-               </div>
-               <div class="card-footer">
-                   <a href="Operan.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary">Se presentation ↗</a>
-               </div>
-           </div>
+    <nav>
 
-           <div class="project-card reveal-scroll" style="--delay: 0.16s;">
-               <div>
-                   <span class="project-status status-ongoing">Pågående</span>
-                   <h3>Sökmarknadsföring & SEO</h3>
-                   <p class="body-text">
-                       Djupdykning i teknisk SEO, sökordsanalys och optimering av både betald och organisk synlighet för B2B- och B2C-varumärken.
-                   </p>
-               </div>
-           </div>
+        <ul>
 
-           <div class="project-card reveal-scroll" style="--delay: 0.24s;">
-               <div>
-                   <span class="project-status status-upcoming">Kommande</span>
-                   <h3>Examensarbete Berghs</h3>
-                   <p class="body-text">
-                       Avslutande examensprojekt där hela verktygslådan inom Growth Marketing appliceras på en skarp utmaning för en extern uppdragsgivare.
-                   </p>
-               </div>
-           </div>
-       </div>
-   </section>
+            <li>
+                <a href="#about">Om mig</a>
+            </li>
 
-   <section class="section" id="contact">
-       <h2 class="section-title">
-           START A<br>
-           <span class="title-italic">conversation</span>
-       </h2>
-   
-       <div class="contact-card-wrapper">
-           <div class="contact-card">
-               <span class="project-status status-completed">Öppen för uppdrag & samarbete</span>
-               <p class="body-text" style="margin-top: 20px;">
-                   Söker du en analytisk Growth Marketer från Berghs som sätter affärsnytta och spårbarhet i fokus? Let's connect.
-               </p>
-               <div class="contact-actions">
-                   <a href="mailto:rahel.rubil@student.berghs.se" class="btn-primary">Skicka e-post ↗</a>
-                   <a href="https://www.linkedin.com/in/rahel-rubil-588506179/" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn ↗</a>
-               </div>
-           </div>
-       </div>
-   </section>
+            <li>
+                <a href="#skills">Kompetenser</a>
+            </li>
 
-   <div class="circular-badge">
-       <svg viewBox="0 0 100 100" overflow="visible">
-           <path id="circlePathFixed" d="M 15, 50 a 35,35 0 1,0 70,0 a 35,35 0 1,0 -70,0" fill="transparent" />
-           <text><textPath href="#circlePathFixed" xlink:href="#circlePathFixed" startOffset="0%">• EXPERIMENT • MEASURE • SCALE </textPath></text>
-       </svg>
-   </div>
+            <li>
+                <a href="#projects">Kurser & Case</a>
+            </li>
 
-   <!-- ALLT I EN SCRIPT-TAGG: DECRYPT/SCRAMBLE + SCROLL-REVEAL -->
-   <script>
-       // 1. Decrypted Text effekt på hero subtitle ("in the making")
-       const el = document.getElementById('decrypt-hero');
-       if (el) {
-           const finalStr = el.innerText;
-           const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/\\_#@%';
-           let frame = 0;
-           const totalFrames = 25;
-           const interval = setInterval(() => {
-               frame++;
-               let out = '';
-               for (let i = 0; i < finalStr.length; i++) {
-                   if (finalStr[i] === ' ') {
-                       out += ' ';
-                       continue;
-                   }
-                   if (frame / totalFrames > i / finalStr.length) {
-                       out += finalStr[i];
-                   } else {
-                       out += chars[Math.floor(Math.random() * chars.length)];
-                   }
-               }
-               el.innerText = out;
-               if (frame >= totalFrames) {
-                   el.innerText = finalStr;
-                   clearInterval(interval);
-               }
-           }, 40);
-       }
+            <li>
+                <a href="#contact">Kontakt</a>
+            </li>
 
-       // 2. Scroll-reveal garanti för korten
-       const items = document.querySelectorAll('.reveal-scroll');
-       const showVisible = () => {
-           items.forEach(el => {
-               const rect = el.getBoundingClientRect();
-               if (rect.top < window.innerHeight - 50) {
-                   el.classList.add('is-visible');
-               }
-           });
-       };
+        </ul>
 
-       if ('IntersectionObserver' in window) {
-           const observer = new IntersectionObserver((entries) => {
-               entries.forEach(entry => {
-                   if (entry.isIntersecting) {
-                       entry.target.classList.add('is-visible');
-                       observer.unobserve(entry.target);
-                   }
-               });
-           }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
-           items.forEach(el => observer.observe(el));
-       }
+    </nav>
 
-       window.addEventListener('scroll', showVisible, { passive: true });
-       window.addEventListener('load', showVisible);
-       setTimeout(showVisible, 100);
-   </script>
+</header>
+
+
+
+<!-- --------------------------------------------------
+     HOME
+-------------------------------------------------- -->
+
+<section class="section" id="home">
+
+    <h1 class="hero-title">
+
+        GROWTH<br>
+        MARKETER<br>
+
+        <span
+            class="title-italic"
+            id="decrypt-hero">
+            in the making
+        </span>
+
+    </h1>
+
+</section>
+
+
+
+<!-- --------------------------------------------------
+     OM MIG
+-------------------------------------------------- -->
+
+<section class="section" id="about">
+
+    <h2 class="section-title">
+
+        BERGHS SCHOOL<br>
+
+        <span class="title-italic">
+            of communication
+        </span>
+
+    </h2>
+
+
+    <div class="about-container">
+
+
+        <div class="about-image-box">
+
+            <img
+                src="rahel.jpg"
+                alt="Rahel Rubil Profilbild"
+                class="about-image">
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="body-text">
+
+                Berghs-student med inriktning Growth Marketing
+                med flerårig erfarenhet av versamhetsansvar och
+                verksamhetsutveckling. Drivs av att ersätta
+                gissningar med mätbar logi – från spårningssättning
+                i GTM och GA4 till att rigga hypoteser för lönsam
+                tillväxt.
+
+            </p>
+
+
+            <p class="body-text">
+
+                Översätter digitalt användarbeteende, gapanalys
+                och spårningsdata till skalbara optimeringsåtgärder
+                med stöd av AI-stödda insiktsverktyg.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- --------------------------------------------------
+     KOMPETENSER
+-------------------------------------------------- -->
+
+<section class="section" id="skills">
+
+    <h2 class="section-title">
+
+        CORE<br>
+
+        <span class="title-italic">
+            Competencies
+        </span>
+
+    </h2>
+
+
+    <div class="skills-grid">
+
+
+        <!-- DATA & ANALYTICS -->
+
+        <div
+            class="skill-card reveal-scroll"
+            style="--delay: 0.05s;">
+
+            <h3>
+                Data & Analytics
+            </h3>
+
+            <div class="tag-container">
+
+                <span class="tag">
+                    GA4
+                </span>
+
+                <span class="tag">
+                    Google Tag Manager
+                </span>
+
+                <span class="tag">
+                    Looker Studio
+                </span>
+
+                <span class="tag">
+                    Data Visualisation
+                </span>
+
+                <span class="tag">
+                    Spreadsheet Modelling
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- GROWTH STRATEGY -->
+
+        <div
+            class="skill-card reveal-scroll"
+            style="--delay: 0.12s;">
+
+            <h3>
+                Growth Strategy & Testing
+            </h3>
+
+            <div class="tag-container">
+
+                <span class="tag">
+                    Growth Mindset
+                </span>
+
+                <span class="tag">
+                    Experimentation
+                </span>
+
+                <span class="tag">
+                    Hypothesis Frameworks
+                </span>
+
+                <span class="tag">
+                    Funnel Optimization
+                </span>
+
+                <span class="tag">
+                    Profitable Cost Units
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PAID & ORGANIC -->
+
+        <div
+            class="skill-card reveal-scroll"
+            style="--delay: 0.19s;">
+
+            <h3>
+                Paid & Organic
+            </h3>
+
+            <div class="tag-container">
+
+                <span class="tag">
+                    Meta Ads
+                </span>
+
+                <span class="tag">
+                    Google Ads
+                </span>
+
+                <span class="tag">
+                    Technical SEO
+                </span>
+
+                <span class="tag">
+                    Attribution & Tracking
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- AI -->
+
+        <div
+            class="skill-card reveal-scroll"
+            style="--delay: 0.26s;">
+
+            <h3>
+                AI & Insight Tooling
+            </h3>
+
+            <div class="tag-container">
+
+                <span class="tag">
+                    AI-Augmented Analysis
+                </span>
+
+                <span class="tag">
+                    HubSpot
+                </span>
+
+                <span class="tag">
+                    Klaviyo
+                </span>
+
+                <span class="tag">
+                    Process Efficiency
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- API & WEB DEVELOPMENT -->
+
+        <div
+            class="skill-card reveal-scroll"
+            style="--delay: 0.33s;">
+
+            <h3>
+                API & Web Development
+            </h3>
+
+
+            <div class="tag-container">
+
+                <span class="tag">
+                    API Integration
+                </span>
+
+                <span class="tag">
+                    JavaScript
+                </span>
+
+                <span class="tag">
+                    JSON
+                </span>
+
+                <span class="tag">
+                    Web Development
+                </span>
+
+            </div>
+
+
+            <div class="weather-preview">
+
+                <p>
+
+                    Integrerat externa API:er med JavaScript
+                    och byggt en fungerande webbapp som
+                    hämtar och presenterar dynamisk data.
+
+                </p>
+
+
+                <div class="weather-data">
+
+                    <strong>
+                        Stockholm Weather
+                    </strong>
+
+
+                    <div id="weather-result">
+
+                        Hämtar väderdata...
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="weather-status"
+                    id="weather-status">
+
+                    Data från Open-Meteo
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- --------------------------------------------------
+     KURSER & CASE
+-------------------------------------------------- -->
+
+<section class="section" id="projects">
+
+    <h2 class="section-title">
+
+        SELECTED<br>
+
+        <span class="title-italic">
+            courses & cases
+        </span>
+
+    </h2>
+
+
+    <div class="projects-grid">
+
+
+        <!-- OPERAN -->
+
+        <div
+            class="project-card reveal-scroll"
+            style="--delay: 0.08s;">
+
+            <div>
+
+                <span class="project-status status-completed">
+                    Slutfört
+                </span>
+
+
+                <h3>
+                    Skarpt Kundcase - Growth Strategy & Kungliga Operan
+                </h3>
+
+
+                <p class="body-text">
+
+                    Utveckling av en heltäckande tillväxtstrategi
+                    för ett svenskt e-handelsbolag med fokus på
+                    GA4-spårning och A/B-testning av landningssidor
+                    (inklusive gapanalys, hypotesramverk och
+                    visualisering av trattmätpunkter till profitable
+                    cost). Utvecklade även ett skarpare case för
+                    Kungliga Operan med målet att ta fram en kampanj
+                    för att locka fler besökare till operan.
+
+                </p>
+
+            </div>
+
+
+            <div class="card-footer">
+
+                <a
+                    href="Operan.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-secondary">
+
+                    Se presentation ↗
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SEO -->
+
+        <div
+            class="project-card reveal-scroll"
+            style="--delay: 0.16s;">
+
+            <div>
+
+                <span class="project-status status-ongoing">
+                    Pågående
+                </span>
+
+
+                <h3>
+                    Sökmarknadsföring & SEO
+                </h3>
+
+
+                <p class="body-text">
+
+                    Djupdykning i teknisk SEO, sökordsanalys
+                    och optimering av både betald och organisk
+                    synlighet för B2B- och B2C-varumärken.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EXAMENSARBETE -->
+
+        <div
+            class="project-card reveal-scroll"
+            style="--delay: 0.24s;">
+
+            <div>
+
+                <span class="project-status status-upcoming">
+                    Kommande
+                </span>
+
+
+                <h3>
+                    Examensarbete Berghs
+                </h3>
+
+
+                <p class="body-text">
+
+                    Avslutande examensprojekt där hela
+                    verktygslådan inom Growth Marketing
+                    appliceras på en skarp utmaning för
+                    en extern uppdragsgivare.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- --------------------------------------------------
+     KONTAKT
+-------------------------------------------------- -->
+
+<section class="section" id="contact">
+
+    <h2 class="section-title">
+
+        START A<br>
+
+        <span class="title-italic">
+            conversation
+        </span>
+
+    </h2>
+
+
+    <div class="contact-card-wrapper">
+
+        <div class="contact-card">
+
+
+            <span class="project-status status-completed">
+
+                Öppen för uppdrag & samarbete
+
+            </span>
+
+
+            <p
+                class="body-text"
+                style="margin-top: 20px;">
+
+                Söker du en analytisk Growth Marketer
+                från Berghs som sätter affärsnytta och
+                spårbarhet i fokus? Let's connect.
+
+            </p>
+
+
+            <div class="contact-actions">
+
+
+                <a
+                    href="mailto:rahel.rubil@student.berghs.se"
+                    class="btn-primary">
+
+                    Skicka e-post ↗
+
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/rahel-rubil-588506179/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-secondary">
+
+                    LinkedIn ↗
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- --------------------------------------------------
+     CIRCULAR BADGE
+-------------------------------------------------- -->
+
+<div class="circular-badge">
+
+    <svg
+        viewBox="0 0 100 100"
+        overflow="visible">
+
+        <path
+            id="circlePathFixed"
+            d="M 15, 50 a 35,35 0 1,0 70,0 a 35,35 0 1,0 -70,0"
+            fill="transparent">
+        </path>
+
+
+        <text>
+
+            <textPath
+                href="#circlePathFixed"
+                xlink:href="#circlePathFixed"
+                startOffset="0%">
+
+                • EXPERIMENT • MEASURE • SCALE
+
+            </textPath>
+
+        </text>
+
+    </svg>
+
+</div>
+
+
+
+<!-- --------------------------------------------------
+     JAVASCRIPT
+-------------------------------------------------- -->
+
+<script>
+
+
+    /* --------------------------------------------------
+       1. DECRYPTED TEXT EFFECT
+    -------------------------------------------------- */
+
+    const el = document.getElementById('decrypt-hero');
+
+    if (el) {
+
+        const finalStr = el.innerText;
+
+        const chars =
+            'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/\\_#@%';
+
+        let frame = 0;
+
+        const totalFrames = 25;
+
+
+        const interval = setInterval(() => {
+
+            frame++;
+
+            let out = '';
+
+
+            for (
+                let i = 0;
+                i < finalStr.length;
+                i++
+            ) {
+
+                if (finalStr[i] === ' ') {
+
+                    out += ' ';
+
+                    continue;
+
+                }
+
+
+                if (
+                    frame / totalFrames >
+                    i / finalStr.length
+                ) {
+
+                    out += finalStr[i];
+
+                } else {
+
+                    out += chars[
+                        Math.floor(
+                            Math.random() *
+                            chars.length
+                        )
+                    ];
+
+                }
+
+            }
+
+
+            el.innerText = out;
+
+
+            if (frame >= totalFrames) {
+
+                el.innerText = finalStr;
+
+                clearInterval(interval);
+
+            }
+
+        }, 40);
+
+    }
+
+
+
+    /* --------------------------------------------------
+       2. SCROLL REVEAL
+    -------------------------------------------------- */
+
+    const items =
+        document.querySelectorAll('.reveal-scroll');
+
+
+    const showVisible = () => {
+
+        items.forEach(el => {
+
+            const rect =
+                el.getBoundingClientRect();
+
+
+            if (
+                rect.top <
+                window.innerHeight - 50
+            ) {
+
+                el.classList.add('is-visible');
+
+            }
+
+        });
+
+    };
+
+
+    if ('IntersectionObserver' in window) {
+
+        const observer =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add(
+                                'is-visible'
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0,
+                    rootMargin:
+                        '0px 0px 0px 0px'
+                }
+            );
+
+
+        items.forEach(el => {
+
+            observer.observe(el);
+
+        });
+
+    }
+
+
+    window.addEventListener(
+        'scroll',
+        showVisible,
+        { passive: true }
+    );
+
+    window.addEventListener(
+        'load',
+        showVisible
+    );
+
+    setTimeout(
+        showVisible,
+        100
+    );
+
+
+
+    /* --------------------------------------------------
+       3. STOCKHOLM WEATHER API
+       Open-Meteo
+    -------------------------------------------------- */
+
+    const weatherResult =
+        document.getElementById(
+            'weather-result'
+        );
+
+
+    const weatherStatus =
+        document.getElementById(
+            'weather-status'
+        );
+
+
+    /*
+       Stockholm coordinates:
+
+       Latitude: 59.3293
+       Longitude: 18.0686
+    */
+
+    const weatherApiUrl =
+        'https://api.open-meteo.com/v1/forecast' +
+        '?latitude=59.3293' +
+        '&longitude=18.0686' +
+        '&current=temperature_2m,weather_code,wind_speed_10m' +
+        '&timezone=Europe%2FStockholm';
+
+
+
+    async function getStockholmWeather() {
+
+        try {
+
+
+            const response =
+                await fetch(weatherApiUrl);
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    'Kunde inte hämta väderdata.'
+                );
+
+            }
+
+
+            const data =
+                await response.json();
+
+
+            const temperature =
+                data.current.temperature_2m;
+
+
+            const windSpeed =
+                data.current.wind_speed_10m;
+
+
+            const weatherCode =
+                data.current.weather_code;
+
+
+            const weatherDescription =
+                getWeatherDescription(
+                    weatherCode
+                );
+
+
+            weatherResult.innerHTML = `
+
+                <div>
+                    ${temperature} °C ·
+                    ${weatherDescription}
+                </div>
+
+                <div>
+                    Vind: ${windSpeed} km/h
+                </div>
+
+            `;
+
+
+            weatherStatus.textContent =
+                'Live-data från Open-Meteo';
+
+
+        } catch (error) {
+
+
+            weatherResult.textContent =
+                'Väderdata kunde inte hämtas just nu.';
+
+
+            weatherStatus.textContent =
+                'Open-Meteo kunde inte nås.';
+
+        }
+
+    }
+
+
+
+    /* --------------------------------------------------
+       4. ÖVERSÄTT WEATHER CODES TILL TEXT
+    -------------------------------------------------- */
+
+    function getWeatherDescription(code) {
+
+
+        if (code === 0) {
+
+            return 'Klart';
+
+        }
+
+
+        if (
+            code === 1 ||
+            code === 2
+        ) {
+
+            return 'Delvis molnigt';
+
+        }
+
+
+        if (code === 3) {
+
+            return 'Mulet';
+
+        }
+
+
+        if (
+            [45, 48].includes(code)
+        ) {
+
+            return 'Dimma';
+
+        }
+
+
+        if (
+            [51, 53, 55].includes(code)
+        ) {
+
+            return 'Duggregn';
+
+        }
+
+
+        if (
+            [61, 63, 65].includes(code)
+        ) {
+
+            return 'Regn';
+
+        }
+
+
+        if (
+            [71, 73, 75].includes(code)
+        ) {
+
+            return 'Snö';
+
+        }
+
+
+        if (
+            [80, 81, 82].includes(code)
+        ) {
+
+            return 'Regnskurar';
+
+        }
+
+
+        if (
+            [95, 96, 99].includes(code)
+        ) {
+
+            return 'Åska';
+
+        }
+
+
+        return 'Varierande väder';
+
+    }
+
+
+
+    /* --------------------------------------------------
+       5. STARTA API-ANROPET
+    -------------------------------------------------- */
+
+    getStockholmWeather();
+
+
+</script>
+
 </body>
 </html>
