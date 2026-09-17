@@ -1426,14 +1426,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     weatherCode
                 );
 
-window.dataLayer = window.dataLayer || [];
+            window.dataLayer = window.dataLayer || [];
 
-window.dataLayer.push({
-    event: 'weather_data_loaded',
-    city: 'Stockholm',
-    temperature: temperature,
-    wind_speed: windSpeed,
-    weather_description: weatherDescription
+            window.dataLayer.push({
+            event: 'weather_data_loaded',
+            city: 'Stockholm',
+      temperature: temperature,
+       wind_speed: windSpeed,
+       weather_description: weatherDescription
 });
             weatherResult.innerHTML = `
 
